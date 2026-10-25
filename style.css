@@ -1,0 +1,230 @@
+
+/* ===== GIAO DIỆN CHUNG ===== */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333333;
+    background-color: #f0f4f8;
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+    margin: 0;
+    padding: 20px;
+}
+
+/* ===== BÀI 1: THÔNG TIN CÁ NHÂN ===== */
+.profile {
+    width: 80%;
+    max-width: 600px;
+    padding: 25px;
+    margin: 30px auto;
+    border: 2px solid #3498db;
+    border-radius: 16px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.profile p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+#avatar {
+    display: block;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #3498db;
+    margin: 20px auto;
+}
+
+.profile a {
+    color: #1769aa;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.profile a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+/* ===== BÀI 2: BẢNG ĐIỂM ===== */
+.score-card {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    padding: 30px 20px 20px;
+    margin: 40px auto;
+    border: 1px solid #cccccc;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.score-card table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+.score-card th,
+.score-card td {
+    border: 1px solid #cccccc;
+    padding: 12px;
+}
+
+.score-card th {
+    background-color: #1769aa;
+    color: white;
+}
+
+.score-card tbody tr:nth-child(odd) {
+    background-color: #eef5ff;
+}
+
+.score-card tbody tr:nth-child(even) {
+    background-color: white;
+}
+
+.score-card tbody tr:hover {
+    background-color: #d4e8ff;
+}
+
+.score-card tbody tr:last-child {
+    font-weight: bold;
+    background-color: #ffe6a7;
+}
+
+.score-card td:first-child,
+.score-card td:last-child {
+    text-align: center;
+}
+
+/* Nhãn BẢNG ĐIỂM */
+.score-card::before {
+    content: "BẢNG ĐIỂM";
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    padding: 5px 12px;
+    color: white;
+    background-color: #1769aa;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* ===== BÀI 3: FORM ĐĂNG KÝ ===== */
+.form-card {
+    position: relative;
+    width: 90%;
+    max-width: 700px;
+    padding: 25px;
+    margin: 40px auto;
+    border: 1px solid #cccccc;
+    border-radius: 14px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-card > h1 {
+    margin-bottom: 25px;
+}
+
+.form-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-card form p {
+    margin: 5px 0;
+}
+
+.form-card input[type="text"],
+.form-card input[type="email"],
+.form-card input[type="password"],
+.form-card select,
+.form-card textarea {
+    box-sizing: border-box;
+    max-width: 100%;
+    padding: 10px;
+    border: 1px solid #aab4c0;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.form-card input[type="text"],
+.form-card input[type="email"],
+.form-card input[type="password"],
+.form-card select {
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-card textarea {
+    width: 100%;
+}
+
+.form-card input:focus,
+.form-card select:focus,
+.form-card textarea:focus {
+    outline: 2px solid #1769aa;
+    border-color: #1769aa;
+}
+
+.form-card input[type="radio"],
+.form-card input[type="checkbox"] {
+    accent-color: #1769aa;
+}
+
+.form-card input[type="submit"] {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    background-color: #1769aa;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-card input[type="submit"]:hover {
+    background-color: #0c4778;
+}
+
+/* Nhãn ĐĂNG KÝ MỚI */
+.form-card::before {
+    content: "ĐĂNG KÝ MỚI";
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    padding: 5px 12px;
+    color: white;
+    background-color: #218838;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* ===== HIỂN THỊ TRÊN ĐIỆN THOẠI ===== */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .profile,
+    .score-card,
+    .form-card {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 16px;
+    }
+
+    .score-card th,
+    .score-card td {
+        padding: 6px;
+        font-size: 0.85rem;
+    }
+}
