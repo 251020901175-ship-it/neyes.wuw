@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập HTML - Sinh viên</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    h1, h2 {
+        text-align: center;
+        color: darkblue;
+    }
+
+    ul {
+        list-style-type: square;
+    }
+
+    li {
+        padding: 8px;
+        margin: 5px 0;
+    }
+
+    li:hover {
+        background-color: #d8f3dc;
+    }
+</style>
+</head>
+
+<body>
+
+    <!-- ================= BÀI 1 ================= -->
+
+   <section class="profile">
+    <h1>Thông tin cá nhân</h1>
+
+    <p style="color: crimson;">Họ tên: Bùi Ngọc Yến</p>
+    <p>Ngày sinh: 15/01/2007</p>
+    <p>Lớp: ATTT K19</p>
+
+   <img id="avatar"
+     src="uhhh.jpg"
+     alt="Ảnh đại diện của Ngọc Yến"
+     width="200">
+
+    <h2>Sở thích</h2>
+
+    <ul>
+        <li>Nghe nhạc</li>
+        <li>Chơi game</li>
+        <li>Lập trình</li>
+        <li>Đọc sách</li>
+    </ul>
+
+    <h2>Liên kết cá nhân</h2>
+
+    <a href="https://www.facebook.com/neyesdayroima/"
+       target="_blank">
+        Facebook
+    </a>
+
+    <br>
+</section>
+
+    <!-- ================= BÀI 2 ================= -->
+
+    <section class="score-card">
+    <h1>Bảng điểm sinh viên</h1>
+
+    <table border="1">
+
+        <tr>
+            <th>STT</th>
+            <th>Môn học</th>
+            <th>Điểm</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Lập trình C++</td>
+            <td>8.5</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Cơ sở dữ liệu</td>
+            <td>8.0</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Lý thuyết xác suất thống kê</td>
+            <td>7.5</td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>Tiếng anh cơ bản 3</td>
+            <td>9.0</td>
+        </tr>
+
+
+        <tr>
+            <th colspan="2">Điểm trung bình</th>
+            <th>8.2</th>
+        </tr>
+
+    </table>
+    </section>  
+
+
+    <!-- ================= BÀI 3 ================= -->
+
+    <h1>Đăng ký sinh viên</h1>
+
+    <form>
+
+        <p>
+            <label>Họ tên:</label>
+            <input type="text"
+                   name="hoten"
+                   placeholder="Nhập họ tên"
+                   required>
+        </p>
+
+        <p>
+            <label>Email:</label>
+            <input type="email"
+                   name="email"
+                   placeholder="Nhập email"
+                   required>
+        </p>
+
+        <p>
+            <label>Mật khẩu:</label>
+            <input type="password"
+                   name="matkhau"
+                   placeholder="Nhập mật khẩu">
+        </p>
+
+        <p>
+            <label>Giới tính:</label>
+
+            <input type="radio"
+                   name="gioitinh"
+                   value="nam">
+            Nam
+
+            <input type="radio"
+                   name="gioitinh"
+                   value="nu">
+            Nữ
+        </p>
+
+        <p>
+            <label>Sở thích:</label>
+            <br>
+
+            <input type="checkbox"
+                   name="sothich"
+                   value="nghenhac">
+            Nghe nhạc
+
+            <input type="checkbox"
+                   name="sothich"
+                   value="choigame">
+            Chơi game
+
+            <input type="checkbox"
+                   name="sothich"
+                   value="laptrinh">
+            Lập trình
+        </p>
+
+        <p>
+            <label>Ngành học:</label>
+
+            <select name="nganhhoc">
+                <option value="cntt">CNTT</option>
+                <option value="kinhte">Kinh tế</option>
+                <option value="dientu">Điện tử</option>
+            </select>
+        </p>
+
+        <p>
+            <label>Ghi chú:</label>
+            <br>
+
+            <textarea name="ghichu"
+                      placeholder="Nhập ghi chú"
+                      rows="5"
+                      cols="40"></textarea>
+        </p>
+
+        <input type="submit" value="Gửi">
+
+    </form>
+
+</body>
+</html>
